@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "tweets/2022-11-11",
+				"folderPath": "tweets",
 				"container": "rawtweets"
 			},
 			"compressionCodec": "snappy"

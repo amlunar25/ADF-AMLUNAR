@@ -10,6 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat(utcNow(),'.parquet')",
+					"type": "Expression"
+				},
 				"container": "rawtweets"
 			},
 			"compressionCodec": "snappy"

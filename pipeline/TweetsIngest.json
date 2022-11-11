@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Raw Tweets",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -19,7 +19,13 @@
 						"type": "ParquetSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"fileListPath": "rawtweets/tweets",
+							"recursive": true,
+							"modifiedDatetimeStart": {
+								"value": "@addHours(utcNow(),-12)",
+								"type": "Expression"
+							},
+							"wildcardFolderPath": "tweets",
+							"wildcardFileName": "*.parquet",
 							"enablePartitionDiscovery": false
 						}
 					},
