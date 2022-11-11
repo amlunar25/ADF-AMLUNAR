@@ -1,0 +1,19 @@
+{
+	"name": "TweetsDestination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorageCompanyA",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "rawtweets"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

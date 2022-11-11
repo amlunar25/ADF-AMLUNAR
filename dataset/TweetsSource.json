@@ -1,0 +1,20 @@
+{
+	"name": "TweetsSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorageCompanyB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "tweets/2022-11-11",
+				"container": "rawtweets"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
