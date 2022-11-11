@@ -5,12 +5,20 @@
 			"referenceName": "BlobStorageCompanyB",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Folder": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "tweets",
+				"folderPath": {
+					"value": "@dataset().Folder",
+					"type": "Expression"
+				},
 				"container": "rawtweets"
 			},
 			"compressionCodec": "snappy"
